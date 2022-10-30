@@ -32,21 +32,21 @@ var future = $('.list-dates-item');
 // Click event causes alert time color state toggle
 
 
-time.each(function (i, timeBlock) {
-var hour = (timeBlock.textContent.split("\n")[0]);
+time.each(function (i, textarea) {
+var hour = (textarea.textContent.split("\n")[0]);
 var timeBlockHour = moment(hour, 'h:mma');
 var currentHour = moment(moment().format("ha"),"h:mma");
 console.log(timeBlockHour)
 console.log(currentHour)
 console.log(timeBlockHour.isBefore(currentHour)); // true
     if (timeBlockHour.isBefore(currentHour)) {
-      $(timeBlock).css({ 'background-color': '#d9e9e8', color: 'grey' });
+      $(textarea).css({ 'background-color': 'grey'});
     } 
     else if (timeBlockHour.isAfter(currentHour)) {
-        $(timeBlock).css({ 'background-color': '#1a1a1a', color: 'green' });
+        $(textarea).css({ 'background-color': 'green'});
       }
     else {
-        $(timeBlock).css({ 'background-color': '#1a1a1a', color: 'red' });
+        $(textarea).css({ 'background-color': 'red'});
       }
   });
 
