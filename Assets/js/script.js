@@ -3,7 +3,7 @@ var time = $('.list-dates-item');
 var date = moment().format('LL');
 var day = $('#currentDay');
 day.text(date)
-var saveButton = document.getElementById("save");
+var saveButton = document.getElementById("saveOne-btn");
 
 // Save button variables
 var amAndpmButtonEl = $('#saveOne-btn', '#saveTwo-btn', '#saveThree-btn', '#saveFour-btn', '#saveFive-btn', '#saveSix-btn', '#saveSeven-btn', '#saveEight-btn', '#saveNine-btn');
