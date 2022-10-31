@@ -7,17 +7,6 @@ var saveButton = document.getElementById("saveOne-btn");
 
 // Save button variables
 var amAndpmButtonEl = $('#saveOne-btn', '#saveTwo-btn', '#saveThree-btn', '#saveFour-btn', '#saveFive-btn', '#saveSix-btn', '#saveSeven-btn', '#saveEight-btn', '#saveNine-btn');
- 
-// //Input event into the time block
-// // function inputEvent() {
-//     var input = generateInput();
-//     var inputText = document.querySelector(".list-dates-item");
-
-//     inputText.value = input;
-// }
-
-// //Add event listener to generate input button
-// generateBtn.addEventListener("click", inputEvent);
 
 //Function
 function generateInput() {
