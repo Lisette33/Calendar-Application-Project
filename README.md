@@ -1,3 +1,5 @@
+<img width="468" alt="CalendarPic" src="https://user-images.githubusercontent.com/113862182/199151565-7f129d2f-67bd-44d3-b887-fd05a5745815.png">
+
 # Calendar-Application-Project
 The calendar is a workday scheduler application that allows users to schedule their work events.
 
