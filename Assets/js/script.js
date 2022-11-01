@@ -1,23 +1,9 @@
-//Variable for Past, Present, or Future 
+//Variables
 var time = $('.list-dates-item');
 var date = moment().format('LL');
 var day = $('#currentDay');
 day.text(date)
 var saveButton = document.getElementById("saveOne-btn");
-
-// Save button variables
-var amAndpmButtonEl = $('#saveOne-btn', '#saveTwo-btn', '#saveThree-btn', '#saveFour-btn', '#saveFive-btn', '#saveSix-btn', '#saveSeven-btn', '#saveEight-btn', '#saveNine-btn');
- 
-// //Input event into the time block
-// // function inputEvent() {
-//     var input = generateInput();
-//     var inputText = document.querySelector(".list-dates-item");
-
-//     inputText.value = input;
-// }
-
-// //Add event listener to generate input button
-// generateBtn.addEventListener("click", inputEvent);
 
 //Function
 function generateInput() {
@@ -27,7 +13,6 @@ var present = $('.list-dates-item');
 var future = $('.list-dates-item');
 
 // Click event causes alert time color state toggle
-
 time.each(function (i, textarea) {
 var hour = (textarea.textContent.split("\n")[0]);
 var timeBlockHour = moment(hour, 'h:mma');
@@ -46,14 +31,12 @@ console.log(timeBlockHour.isBefore(currentHour)); // true
       }
   });
 
-
 }
 generateInput()
 
 // Click event causes Save button to function 
-
 function saveDataEvent() {
-  //Save data form data as an object
+//Save data form data as an object
 var event = {
   time: time.value
 };
@@ -62,21 +45,18 @@ localStorage.setItem("event", JSON.stringify(event));
 }
 
 function renderDataEvent() {
-  // Use JSON.parse() to convert text to JavaScript object
-  var dataEvent = JSON.parse(localStorage.getItem("event"));
-  // Check if data is returned, if not exit out of the function
-  if (dataEvent !== null) {
+// Use JSON.parse() to convert text to JavaScript object
+var dataEvent = JSON.parse(localStorage.getItem("event"));
+// Check if data is returned, if not exit out of the function
+if (dataEvent !== null) {
   document.getElementById("list-dates-item").innerHTML = dataEvent.time;
-  } else {
-    return;
-  }
+} else {
+  return;
 }
-
-saveButton.addEventListener("click", function(event) {
-  event.preventDefault();
-  saveDataEvent();
-  renderDataEvent();
-  });
+}
+$('#dates').on("click", "button", function(){
+localStorage.setItem($(this).attr("id"),$("#"+$(this).attr("id")+"-text").val())
+})
   
   // The init() function fires when the page is loaded 
   function init() {
